@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glow & Go</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="navbar">
+        <div class="navbar-container">
+          <div class="navbar-logo">
+            <h1>Glow & Go</h1>
+          </div>
+          <div class="navbar-toggle" id="mobile-menu">
+            &#9776; <!-- This is the hamburger icon -->
+          </div>
+          <nav class="navbar-links" id="navbarLinks">
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      
+      
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="overlay">
+      <h1 class="logo">Glow & Go</h1>
+      <p class="tagline">Beauty is being comfortable in your own skin. Pamper it well.</p>
+      <a href="#contact" class="btn">Book Your Glow</a>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="about-section">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="images/about.jpg" alt="Nail salon ambiance">
+      </div>
+      <div class="about-text">
+        <p>
+          At <strong>Glow & Go</strong>, beauty is more than just a service — it’s an experience. 
+          From the moment you walk in, you're welcomed into a warm, luxurious atmosphere designed to help you unwind, 
+          recharge, and walk out glowing.
+        </p>
+        <p>
+          Our expert nail technicians and beauty specialists are passionate about pampering you with 
+          top-tier manicures, pedicures, gel polish, acrylics, and facial treatments. Whether you’re preparing 
+          for a special event or just treating yourself to some self-love, we’ve got you covered.
+        </p>
+        <p>
+          With a purple palette inspired by elegance and royalty, Glow & Go is your go-to destination for timeless beauty.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img src="images/manicure.jpg" alt="Manicure">
+        <h3>Manicure</h3>
+      </div>
+      <div class="card">
+        <img src="images/pedicure.jpg" alt="Pedicure">
+        <h3>Pedicure</h3>
+      </div>
+      <div class="card">
+        <img src="images/gelpolish.jpg" alt="Gel Polish">
+        <h3>Gel Polish</h3>
+      </div>
+      <div class="card">
+        <img src="images/acrylics.jpg" alt="Acrylics">
+        <h3>Acrylics</h3>
+      </div>
+      <div class="card">
+        <img src="images/facials.jpg" alt="Facials">
+        <h3>Facials</h3>
+      </div>
+    </div>
+  </section>
+
+<!-- Gallery -->
+<section id="gallery" class="gallery-section">
+    <h2 class="section-title">Our Work</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="Nail art design">
+      <img src="images/gallery2.jpg" alt="Elegant nails">
+      <img src="images/gallery3.jpg" alt="Manicure setup">
+      <img src="images/gallery4.jpg" alt="Facial treatment">
+      <img src="images/gallery1.jpg" alt="Pedicure session">
+      <img src="images/gallery2.jpg" alt="Acrylic nails design">
+      <img src="images/gallery3.jpg" alt="Acrylic nails design">
+      <img src="images/gallery4.jpg" alt="Acrylic nails design">
+    </div>
+  </section>
+  
+  
+<!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <p><strong>Location:</strong> Mwitumo Market Centre</p>
+        <p><strong>Phone:</strong> 0727 739 615 / 0743 839 676</p>
+        <p><strong>Email:</strong> glowag25@gmail.com</p>
+        <p>Follow us on TikTok <strong>@Glow & GO</strong></p>
+      </div>
+      <form action="https://formsubmit.co/glowag25@gmail.com" method="POST" class="booking-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <textarea name="message" placeholder="Service you're booking for" rows="4" required></textarea>
+        <button type="submit" class="btn">Book Now</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Glow & Go. All rights reserved.</p>
+  </footer>
+
+  <button id="backToTop" title="Back to Top">↑</button>
+
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+  
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    };
+  
+    backToTopBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+<script>
+    const toggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('navbarLinks');
+  
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>  
+</body>
+</html>
